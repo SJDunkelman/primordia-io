@@ -115,7 +115,7 @@ const IndexPage = () => {
             {formSent ? <p className="font-light text-xl text-white">𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝕡𝕒𝕔𝕜. 𝕎𝕖'𝕝𝕝 𝕓𝕖 𝕚𝕟 𝕥𝕠𝕦𝕔𝕙 𝕤𝕠𝕠𝕟.</p> : <></>}
         </div>
     </section>
-    <section className="text-white flex flex-col space-y-6 items-center pb-8">
+    <section className="text-white flex flex-col space-y-6 items-center pb-8 text-center">
         <h2 className="text-4xl">𝕎𝕒𝕟𝕥 𝕥𝕠 𝕙𝕖𝕒𝕣 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 ℙ𝕣𝕚𝕞𝕠𝕕𝕚𝕒?</h2>
         <p>Follow us on Twitter or join our Telegram</p>
         <div className="flex space-x-8">
