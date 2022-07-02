@@ -17,6 +17,15 @@ const Star = styled.button.attrs(props => ({
 `
 
 function StarryNight(){
+    const mobileBreakpoint = 480;
+    const [screenWidth, setScreenWidth] = useState(
+        typeof window !== "undefined" ? window.innerWidth : mobileBreakpoint
+    );
+
+    const [screenHeight, setScreenHeight] = useState(
+        typeof window !== "undefined" ? window.innerHeight : mobileBreakpoint
+    );
+
     var numberParticles;
     if (window.innerWidth > 1200){
         numberParticles = 100;
@@ -28,7 +37,7 @@ function StarryNight(){
     function GenerateStars(numberGenerated, size){
         let newStars = []
         for (var i = 0; i < numberGenerated; i++) {
-            let randX = Math.floor(Math.random() * (window.innerWidth - 20 + 1) + 20)
+            let randX = Math.floor(Math.random() * (screenWidth - 20 + 1) + 20)
             let randY = Math.floor(Math.random() * (window.innerHeight - 20 + 1) + 20)
             let randA = Math.floor(Math.random() * (80 - 15 + 1) + 15) // Picks random int between 15 and 100
             newStars.push(<Star opacity={`${randA}%`} x={`${randX}px`} y={`${randY}px`} s={`${size}px`} key={i} />)
