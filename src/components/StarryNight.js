@@ -27,7 +27,7 @@ function StarryNight(){
     );
 
     var numberParticles;
-    if (window.innerWidth > 1200){
+    if (screenWidth > 1200){
         numberParticles = 100;
     }
     else{
@@ -38,7 +38,7 @@ function StarryNight(){
         let newStars = []
         for (var i = 0; i < numberGenerated; i++) {
             let randX = Math.floor(Math.random() * (screenWidth - 20 + 1) + 20)
-            let randY = Math.floor(Math.random() * (window.innerHeight - 20 + 1) + 20)
+            let randY = Math.floor(Math.random() * (screenHeight - 20 + 1) + 20)
             let randA = Math.floor(Math.random() * (80 - 15 + 1) + 15) // Picks random int between 15 and 100
             newStars.push(<Star opacity={`${randA}%`} x={`${randX}px`} y={`${randY}px`} s={`${size}px`} key={i} />)
         }
