@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #1a1c51;
+}
+
+@keyframes starmoveleft {
+    0% {
+        left: 0
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
+@keyframes starmove {
+    0% {
+        transform: -translate(100%);
+    }
+    100% {
+        transform: translate(100%);
+    }
+}
+
+.stars {
+    animation: starmove 10s linear infinite;
+}
+
+.stars2 {
+    animation: starmove 20 linear infinite;
+    animation-delay: 10s;
+}
+
+.stars {
+    animation: starmove 20s linear infinite;
+}
+
+.stars-right {
+    animation: starmove 20 linear infinite;
+}
+
+.white-filter {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(105deg) brightness(104%) contrast(101%);
+}
+
+.hover-blue:hover {
+    filter: invert(85%) sepia(40%) saturate(2395%) hue-rotate(179deg) brightness(101%) contrast(105%);
+}
+
+.hover-purple:hover {
+    filter: invert(83%) sepia(43%) saturate(5341%) hue-rotate(202deg) brightness(101%) contrast(101%);
+}
