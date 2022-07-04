@@ -21,8 +21,8 @@ const MemesPage = () => {
     console.log(allMemes);
 
     return (
-        <section className="relative w-full h-full  py-12">
-            <div className="absolute bg-night-sky top-0 left-0 w-screen z-0 text-white py-12  text-center">
+        <section className="relative w-full h-full">
+            <div className="bg-night-sky bg-no-repeat w-screen z-0 text-white py-12 text-center">
                 <h1 className="text-5xl">Memes</h1>
                 <p className="pt-4">Click on any to open up the full image.</p>
                 <div className="w-3/4 flex flex-wrap mx-auto py-8 justify-center">
