@@ -116,14 +116,14 @@ const IndexPage = () => {
         </div>
     </section>
     <section className="text-white flex flex-col space-y-6 items-center pb-8 text-center">
-        <h2 className="text-4xl">𝕎𝕒𝕟𝕥 𝕥𝕠 𝕙𝕖𝕒𝕣 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 ℙ𝕣𝕚𝕞𝕠𝕕𝕚𝕒?</h2>
-        <p>Follow us on Twitter or join our Telegram</p>
+        <h2 className="text-4xl">𝕎𝕒𝕟𝕥 𝕥𝕠 𝕙𝕖𝕒𝕣 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 ℙ𝕣𝕚𝕞𝕠𝕣𝕕𝕚𝕒?</h2>
+        <p>Follow us on Twitter or join our Community</p>
         <div className="flex space-x-8">
             <a href="https://www.twitter.com/primordia_io" target="_blank">
                 <img src={Twitter} alt="Primordia Twitter" className="w-10 white-filter hover-blue cursor-pointer"/>
             </a>
-            <a href="https://t.me/+fczULCMRBKhmMTQ0" target="_blank">
-                <img src={Telegram} alt="Primordia Telegram" className="w-10 white-filter hover-purple cursor-pointer"/>
+            <a href="https://twitter.com/i/communities/1543991881020973057" target="_blank">
+                <img src={Twitter} alt="Primordia Twitter community" className="w-10 white-filter hover-purple cursor-pointer"/>
             </a>
         </div>
         <p className="pt-12 font-light text-sm">At this time we are not affiliated in any way, shape or form with the official Moonrunners team.</p>
