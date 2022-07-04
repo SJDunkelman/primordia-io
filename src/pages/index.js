@@ -96,7 +96,7 @@ const IndexPage = () => {
             <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 justify-center items-center w-full pt-6 mx-auto" method="POST">
                 <div className="flex items-center space-x-4">
                     <label htmlFor="contact" className="mb-2">Email:</label>
-                    <input name="contact" className={`w-full text-white bg-grey/25 border border-white rounded w-full px-4 py-2`} type="email" placeholder="e.g trippywolf@gmail.com" required />
+                    <input name="contact" className={`w-full text-white bg-grey/25 border border-white rounded px-4 py-2`} type="email" placeholder="e.g trippywolf@gmail.com" required />
                 </div>
                 <div className="flex items-center space-x-4">
                     <label htmlFor="role" className="mb-2">Role:</label>
