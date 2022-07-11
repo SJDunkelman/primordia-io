@@ -24,6 +24,12 @@ module.exports = {
         "path": "./src/content/"
       },
       __key: "content"
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/images/favicon.png"
+      },
+    },
   ]
 };

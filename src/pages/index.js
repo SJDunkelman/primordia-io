@@ -82,9 +82,12 @@ const IndexPage = () => {
                     𝕎𝕚𝕝𝕝 𝕪𝕠𝕦 𝕓𝕖 𝕒 𝕡𝕒𝕣𝕥 𝕠𝕗 𝕥𝕙𝕖 𝕤𝕥𝕠𝕣𝕪?</h4>
             </div>
 
+            <a href="https://4a53f5mv5lf.typeform.com/to/OcgevLSD" className="flex items-center justify-center py-12" target="_blank">
             <button className="py-2 px-4 bg-green rounded-lg hover:border-white hover:border-[1px] box-content z-50">
-                <AnchorLink to="/#join">Join</AnchorLink>
+                {/*<AnchorLink to="/#join">Join</AnchorLink>*/}
+                Join
             </button>
+            </a>
         </div>
       </section>
     <section className="flex flex-col py-12 space-y-4 items-center h-full text-white w-full md:w-2/3 lg:w-1/2 text-center mx-auto px-4" id="join">
