@@ -44,24 +44,28 @@ const IndexPage = () => {
 
     const [formSent, setFormStatus] = useState(false);
 
-    const form = useRef();
-    function sendEmail(e) {
-        e.preventDefault();
+    // const form = useRef();
+    // function sendEmail(e) {
+    //     e.preventDefault();
+    //
+    //     emailjs.sendForm('service_0ludavd', 'template_o2pmday', form.current, 'rxcog2eioKDu9lMcX')
+    //         .then((result) => {
+    //             console.log(result.text);
+    //         }, (error) => {
+    //             console.log(error.text);
+    //         });
+    //     // emailjs.sendForm('service_0ludavd', 'template_17hp6mg', form.current, 'juYRxtVyRMKhElqaf')
+    //     //     .then((result) => {
+    //     //         console.log(result.text);
+    //     //     }, (error) => {
+    //     //         console.log(error.text);
+    //     //     });
+    //     e.target.reset();
+    //     setFormStatus(true);
+    // }
 
-        emailjs.sendForm('service_0ludavd', 'template_o2pmday', form.current, 'rxcog2eioKDu9lMcX')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        // emailjs.sendForm('service_0ludavd', 'template_17hp6mg', form.current, 'juYRxtVyRMKhElqaf')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
-        e.target.reset();
-        setFormStatus(true);
+    function handleForm(){
+        setFormStatus(!formSent);
     }
 
   return (
@@ -83,7 +87,7 @@ const IndexPage = () => {
             </button>
         </div>
       </section>
-    <section className="flex flex-col pt-12 pb-20 space-y-4 items-center h-full text-white w-full md:w-2/3 lg:w-1/2 text-center mx-auto px-4" id="join">
+    <section className="flex flex-col py-12 space-y-4 items-center h-full text-white w-full md:w-2/3 lg:w-1/2 text-center mx-auto px-4" id="join">
         <h2 className="text-4xl">𝕆𝕦𝕣 𝕛𝕠𝕦𝕣𝕟𝕖𝕪 𝕙𝕒𝕤 𝕛𝕦𝕤𝕥 𝕓𝕖𝕘𝕦𝕟</h2>
         <p>Our goal is to take the rich storytelling and world building of Moonrunners and build interactive experiences that allow holders to further immerse themselves in Primordia.</p>
         <p className="text-xl">𝔽𝕠𝕣 𝕥𝕙𝕖 𝕡𝕒𝕔𝕜, 𝕓𝕪 𝕥𝕙𝕖 𝕡𝕒𝕔𝕜.</p>
@@ -93,25 +97,32 @@ const IndexPage = () => {
                     <JobsAccordion title={job.title} bgColour={job.bgColour} description={job.description} />
                 ))
             }
-            <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 justify-center items-center w-full pt-6 mx-auto" method="POST">
-                <div className="flex items-center space-x-4">
-                    <label htmlFor="contact" className="mb-2">Email:</label>
-                    <input name="contact" className={`w-full text-white bg-grey/25 border border-white rounded px-4 py-2`} type="email" placeholder="e.g trippywolf@gmail.com" required />
-                </div>
-                <div className="flex items-center space-x-4">
-                    <label htmlFor="role" className="mb-2">Role:</label>
-                    <select name = "role" className="w-full text-center shadow appearance-none border rounded bg-grey placeholder-white text-black p-2 leading-tight focus:outline-none focus:shadow-outline" required>
-                        <option value = "none" selected disabled>Select Enquiry</option>
-                        <option value = "frontend-dev" >Frontend Dev</option>
-                        <option value = "backend-dev">Backend / Blockchain Dev</option>
-                        <option value = "artist">Artist</option>
-                        <option value = "lore">Lore Master</option>
-                        <option value = "community">Community Manager</option>
-                        <option value = "other">General</option>
-                    </select>
-                    <input type="submit" value="Send" className="bg-green rounded-lg px-4 p-2 hover:border-white" />
-                </div>
-            </form>
+            {/*<form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4 justify-center items-center w-full pt-6 mx-auto" method="POST">*/}
+            {/*    <div className="flex items-center space-x-4">*/}
+            {/*        <label htmlFor="contact" className="mb-2">Email:</label>*/}
+            {/*        <input name="contact" className={`w-full text-white bg-grey/25 border border-white rounded px-4 py-2`} type="email" placeholder="e.g trippywolf@gmail.com" required />*/}
+            {/*    </div>*/}
+            {/*    <div className="flex items-center space-x-4">*/}
+            {/*        <label htmlFor="role" className="mb-2">Role:</label>*/}
+            {/*        <select name = "role" className="w-full text-center shadow appearance-none border rounded bg-grey placeholder-white text-black p-2 leading-tight focus:outline-none focus:shadow-outline" required>*/}
+            {/*            <option value = "none" selected disabled>Select Role</option>*/}
+            {/*            <option value = "frontend-dev" >Frontend Dev</option>*/}
+            {/*            <option value = "backend-dev">Backend / Blockchain Dev</option>*/}
+            {/*            <option value = "artist">Artist</option>*/}
+            {/*            <option value = "lore">Lore Master</option>*/}
+            {/*            <option value = "community">Community Manager</option>*/}
+            {/*            <option value = "other">General</option>*/}
+            {/*        </select>*/}
+            {/*        <input type="submit" value="Send" className="bg-green rounded-lg px-4 p-2 hover:border-white" />*/}
+            {/*    </div>*/}
+            {/*</form>*/}
+            {/*<div >*/}
+                <a href="https://4a53f5mv5lf.typeform.com/to/OcgevLSD" className="flex items-center justify-center py-12" target="_blank">
+                    <button className="py-2 px-4 w-1/4 bg-green rounded-lg hover:border-white hover:border-[1px] box-content z-50" onClick={handleForm}>
+                    Join the Builder Tribe
+                    </button>
+                </a>
+            {/*</div>*/}
             {formSent ? <p className="font-light text-xl text-white">𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕥𝕙𝕖 𝕡𝕒𝕔𝕜. 𝕎𝕖'𝕝𝕝 𝕓𝕖 𝕚𝕟 𝕥𝕠𝕦𝕔𝕙 𝕤𝕠𝕠𝕟.</p> : <></>}
         </div>
     </section>
@@ -119,11 +130,13 @@ const IndexPage = () => {
         <h2 className="text-4xl">𝕎𝕒𝕟𝕥 𝕥𝕠 𝕙𝕖𝕒𝕣 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 ℙ𝕣𝕚𝕞𝕠𝕣𝕕𝕚𝕒?</h2>
         <p>Follow us on Twitter or join our Community</p>
         <div className="flex space-x-8">
-            <a href="https://www.twitter.com/primordia_io" target="_blank">
-                <img src={Twitter} alt="Primordia Twitter" className="w-10 white-filter hover-blue cursor-pointer"/>
+            <a href="https://www.twitter.com/primordia_io" target="_blank" className="flex items-center hover:bg-light-blue hover:rounded-lg p-2">
+                <img src={Twitter} alt="Primordia Twitter" className="w-10 white-filter cursor-pointer"/>
+                <p className="ml-2">Updates</p>
             </a>
-            <a href="https://twitter.com/i/communities/1543991881020973057" target="_blank">
-                <img src={Twitter} alt="Primordia Twitter community" className="w-10 white-filter hover-purple cursor-pointer"/>
+            <a href="https://twitter.com/i/communities/1543991881020973057" target="_blank" className="flex items-center hover:bg-purple hover:rounded-lg p-2">
+                <img src={Twitter} alt="Primordia Twitter community" className="w-10 white-filter cursor-pointer"/>
+                <p className="ml-2">Community</p>
             </a>
         </div>
         <p className="pt-12 font-light text-sm">At this time we are not affiliated in any way, shape or form with the official Moonrunners team.</p>

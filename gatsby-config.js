@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `landing-page`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Primordia`,
+    siteUrl: `https://www.primordia.io`
   },
   plugins: [
     "gatsby-plugin-postcss",
